@@ -30,7 +30,7 @@ npx --yes skills@1.7.4 add GarySus/evose-skills --skill '*' -a codex -g -y --cop
 </details>
 
 <details>
-<summary>Claude Code 或其他编码助手</summary>
+<summary>Claude Code 或其他智能体</summary>
 
 将命令中的 `-a codex` 换成 `-a claude-code`；安装到全部受支持客户端可改为 `--agent '*'`。客户端需要本地终端与文件能力，并能运行 ego-browser。
 
@@ -52,7 +52,7 @@ npx --yes skills@1.7.4 add GarySus/evose-skills --skill '*' -a codex -g -y --cop
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/how-it-works-dark.svg">
-  <img src="docs/assets/how-it-works-light.svg" alt="本地编码助手读取两个 Skill，通过已登录的 ego-browser 操作 Evose，并核验运行结果；定位知识保存在本机。" width="100%">
+  <img src="docs/assets/how-it-works-light.svg" alt="本地智能体读取两个 Skill，通过已登录的 ego-browser 操作 Evose，并核验运行结果；定位知识保存在本机。" width="100%">
 </picture>
 
 | 能力 | 可以做什么 |
@@ -63,7 +63,7 @@ npx --yes skills@1.7.4 add GarySus/evose-skills --skill '*' -a codex -g -y --cop
 | 交互评测 | 改善重复追问、改稿连续性、成品展示与失败接续 |
 | 定位学习 | 记录已验证的资源位置，复用前重新核对身份与元素 |
 
-两个 Skill 安装在本地编码助手中。线上权限和业务操作范围以当前任务为准；学习记录独立保存，升级保留。
+两个 Skill 安装在本地智能体中。线上权限和业务操作范围以当前任务为准；学习记录独立保存，升级保留。
 
 ## 完整文档
 
