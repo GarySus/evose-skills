@@ -3,7 +3,7 @@
   <img src="docs/assets/hero-light.svg" alt="Evose Skills：让你的编码助手具备 Evose 平台操作能力" width="100%">
 </picture>
 
-# 让编码助手直接操作 Evose
+# 让你的智能体直接操作 Evose
 
 用自然语言配置 Agent、搭建工作流、管理 Skill 和排查运行问题。操作经验留在本地，后续任务继续复用。
 
