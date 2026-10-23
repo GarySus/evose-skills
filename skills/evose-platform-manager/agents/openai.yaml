@@ -1,0 +1,6 @@
+interface:
+  display_name: "Evose 平台管理知识库"
+  short_description: "设计 Evose 智能体结构，管理平台操作、运行测试与评测，并持续积累实操经验"
+  default_prompt: "使用 $evose-platform-manager 设计或管理 Evose 智能体，按需读取提示词配置、平台操作和测试评测经验，并将本次新证据更新进知识库。"
+policy:
+  allow_implicit_invocation: true

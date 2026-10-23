@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+learned/
+**/learned/
+.local/
+output/
+*.log
+.agents/
+.codex/
+skills-lock.json

@@ -1,0 +1,16 @@
+{
+  "name": "evose-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portable skills for operating Evose with a local coding agent",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22.20.0" },
+  "scripts": {
+    "test": "node scripts/check.mjs && node skills/evose-platform-manager/scripts/navigation.test.mjs && node skills/evose-platform-manager/scripts/learning.test.mjs",
+    "test:install": "node scripts/install-smoke.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "install:skills": "skills add . --skill evose-platform-manager evose-agent-interaction -a codex -g -y --copy"
+  },
+  "devDependencies": { "skills": "1.7.4" }
+}
