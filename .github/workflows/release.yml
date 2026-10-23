@@ -2,15 +2,25 @@ name: Release
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing release tag to publish
+        required: true
+        default: v0.1.0
 permissions:
   contents: write
   packages: write
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.release.tag_name || inputs.tag }}
+      - uses: actions/setup-node@v7
         with:
           node-version: '22.20.0'
           cache: npm
@@ -20,19 +30,19 @@ jobs:
       - run: npm test
       - run: npm run test:install
       - name: Match tag and package version
-        run: node --input-type=module -e "import fs from 'node:fs'; const p = JSON.parse(fs.readFileSync('package.json')); if (process.env.GITHUB_REF_NAME !== 'v' + p.version) throw new Error('Release tag must match package.json version');"
+        run: node --input-type=module -e "import fs from 'node:fs'; const p = JSON.parse(fs.readFileSync('package.json')); if (process.env.RELEASE_TAG !== 'v' + p.version) throw new Error('Release tag must match package.json version');"
       - name: Build versioned downloads
         run: |
           mkdir -p dist
           npm pack --ignore-scripts --pack-destination dist
-          git archive --format=zip --prefix=evose-skills/ --output="dist/evose-skills-${GITHUB_REF_NAME}.zip" HEAD
+          git archive --format=zip --prefix=evose-skills/ --output="dist/evose-skills-${RELEASE_TAG}.zip" HEAD
           cd dist
           sha256sum *.zip *.tgz > SHA256SUMS
       - name: Attach downloads to release
-        run: gh release upload "$GITHUB_REF_NAME" dist/*.zip dist/*.tgz dist/SHA256SUMS --repo "$GITHUB_REPOSITORY" --clobber
+        run: gh release upload "$RELEASE_TAG" dist/*.zip dist/*.tgz dist/SHA256SUMS --repo "$GITHUB_REPOSITORY" --clobber
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish GitHub npm package
-        run: npm publish dist/*.tgz --ignore-scripts
+        run: npm publish ./dist/*.tgz --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -23,7 +23,7 @@ git diff --check
 
 工作流使用 GitHub 自动提供的 `GITHUB_TOKEN`，权限限于当前仓库的 `contents: write` 和 `packages: write`。不需要个人 npm 密码或另行保存发布令牌。`publishConfig.registry` 将目标限定为 GitHub Packages。
 
-首次创建 npm 包后，在包的 Package settings 中将可见性设为 Public；公开仓库不会自动让 npm 包公开。后续版本沿用该设置。版本发布后不覆盖同版本 npm 包；需要修复时发布新的补丁版本。
+首次创建 npm 包后，在包的 Package settings 中将可见性设为 Public；公开仓库不会自动让 npm 包公开。后续版本沿用该设置。版本发布后不覆盖同版本 npm 包；需要修复时发布新的补丁版本。若包尚未发布且工作流出错，可修复工作流后在 Actions → Release → Run workflow 中填写已有 Release 标签重试；构建仍检出该标签，下载附件按同名替换。
 
 ## 发布内容
 
