@@ -11,3 +11,4 @@ output/
 .agents/
 .codex/
 skills-lock.json
+dist/

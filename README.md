@@ -10,7 +10,7 @@
 [![Checks](https://github.com/GarySus/evose-skills/actions/workflows/check.yml/badge.svg)](https://github.com/GarySus/evose-skills/actions/workflows/check.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-64748b)](LICENSE)
 
-[快速安装](#快速安装) · [使用示例](#使用示例) · [工作方式](#工作方式) · [完整文档](#完整文档)
+[版本下载](https://github.com/GarySus/evose-skills/releases) · [npm 包](https://github.com/GarySus/evose-skills/packages) · [快速安装](#快速安装) · [使用示例](#使用示例) · [工作方式](#工作方式) · [完整文档](#完整文档)
 
 ## 快速安装
 

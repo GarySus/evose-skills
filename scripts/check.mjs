@@ -7,7 +7,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 async function walk(dir) {
   const paths = [];
   for (const entry of await readdir(dir, { withFileTypes: true })) {
-    if (['node_modules', '.git'].includes(entry.name)) continue;
+    if (['node_modules', '.git', 'dist'].includes(entry.name)) continue;
     const path = resolve(dir, entry.name);
     assert(!entry.isSymbolicLink(), `Unexpected symlink: ${path}`);
     if (entry.isDirectory()) {

@@ -129,3 +129,30 @@ npm run install:skills
 ## 许可
 
 本仓库内容采用 [MIT License](../LICENSE)。Skills CLI 为MIT；ego lite及其Skill由上游分发，适用各自条款，本仓库不复制应用、安装脚本或个人浏览器经验。
+
+## 固定版本与离线下载
+
+使用已经发布的版本，可在原安装命令的仓库名后加标签：
+
+```bash
+npx --yes skills@1.7.4 add https://github.com/GarySus/evose-skills/tree/v0.1.0 --skill '*' -a codex -g -y --copy
+```
+
+也可以从 [Releases](https://github.com/GarySus/evose-skills/releases) 下载 `evose-skills-v0.1.0.zip`，解压后将 `add` 的来源改为解压得到的 `evose-skills` 目录。下载包本身包含两个 Skill；首次获取 Skills CLI 和外部依赖仍需要网络。
+
+Release 附件中的 `SHA256SUMS` 可用于校验 ZIP 和 npm tarball：在附件所在目录执行 `shasum -a 256 -c SHA256SUMS`（macOS）或 `sha256sum -c SHA256SUMS`（Linux）。
+
+## GitHub npm 包
+
+`@garysus/evose-skills` 也发布到 GitHub Packages。适合已有 npm registry 配置、希望在项目中锁定依赖版本的用户；普通 Skill 用户直接使用上面的安装命令即可。
+
+GitHub 的 npm registry 即使包公开也要求认证，先按 [GitHub 官方指南](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry) 在本机完成认证。凭据放在本机用户配置中，不提交到项目，也不发送到聊天。
+
+完成认证后，在需要集成的项目中运行：
+
+```bash
+npm install @garysus/evose-skills@0.1.0 --registry=https://npm.pkg.github.com
+npx --yes skills@1.7.4 add ./node_modules/@garysus/evose-skills --skill '*' -a codex -g -y --copy
+```
+
+npm 包提供 Skill 内容、辅助脚本和文档，没有新增常驻服务或 CLI。外部的 ego lite、Evose 登录和授权仍按前文准备。

@@ -15,7 +15,7 @@
 
 原本已安装的Skill保留不变，本仓库是可分发副本。不会因为抽离项目就迁移原有线上业务或替换本机安装。
 
-安装复用Skills CLI，而非开发另一套复制/发现/客户端适配器。仓库 `package.json` 标记private，表示防止误发npm；它不限制GitHub仓库公开。开发依赖精确锁定，业务脚本只有Node标准库。
+安装复用Skills CLI，而非开发另一套复制/发现/客户端适配器。npm 包使用 `@garysus/evose-skills`，通过 `publishConfig.registry` 限定发布到 GitHub Packages；安装仍优先直接使用公开 GitHub 仓库。开发依赖精确锁定，业务脚本只有Node标准库。
 
 本地学习脚本保持原来的轻量追加日志设计，没有新增数据库或Agent框架。白名单仅配置可信HTTPS origin，页面内容不能自行扩展；定位助手不调用业务API。公开材料中的界面经验仍按历史单次/重复观察对待，当前部署需核对。
 
