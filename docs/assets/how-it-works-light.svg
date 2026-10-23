@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="630" viewBox="0 0 1600 630" role="img" aria-labelledby="title desc">
+<title id="title">How Evose Skills works</title>
+<desc id="desc">A coding agent uses two local skills and ego-browser to operate an Evose workspace. Navigation knowledge stays on the local machine.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9" fill="none" stroke="#4f46e5" stroke-width="1.5"/></marker></defs>
+<rect width="1600" height="630" rx="16" fill="#f7f8fa"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="72" y="80" fill="#18212f" font-size="40" font-weight="700" letter-spacing="-1">From a request to a verified result.</text>
+<text x="72" y="126" fill="#5b6575" font-size="26">Existing tools. Explicit targets. Reusable knowledge.</text>
+<rect x="72" y="198" width="448" height="238" rx="12" fill="#ffffff" stroke="#d8dde6" stroke-width="2"/>
+<text x="102" y="252" fill="#18212f" font-size="32" font-weight="700">Your coding agent</text>
+<text x="102" y="300" fill="#5b6575" font-size="24">Local skills</text>
+<text x="102" y="348" fill="#18212f" font-size="25" font-family="monospace">evose-platform-manager</text>
+<text x="102" y="392" fill="#18212f" font-size="25" font-family="monospace">evose-agent-interaction</text>
+<path d="M 540 317 H 652" fill="none" stroke="#4f46e5" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="596" y="284" fill="#5b6575" font-size="23" text-anchor="middle">Operate</text>
+<rect x="680" y="198" width="316" height="238" rx="12" fill="#ffffff" stroke="#d8dde6" stroke-width="2"/>
+<text x="710" y="252" fill="#18212f" font-size="32" font-weight="700">ego-browser</text>
+<text x="710" y="308" fill="#5b6575" font-size="25">Your signed-in browser</text>
+<text x="710" y="358" fill="#5b6575" font-size="25">Observe · Navigate</text>
+<text x="710" y="396" fill="#5b6575" font-size="25">Read · Configure</text>
+<path d="M 1016 317 H 1128" fill="none" stroke="#4f46e5" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1072" y="284" fill="#5b6575" font-size="23" text-anchor="middle">Verify</text>
+<rect x="1156" y="198" width="372" height="238" rx="12" fill="#ffffff" stroke="#d8dde6" stroke-width="2"/>
+<text x="1186" y="252" fill="#18212f" font-size="32" font-weight="700">Evose workspace</text>
+<text x="1186" y="308" fill="#5b6575" font-size="25">Agents · Workflows · Skills</text>
+<text x="1186" y="358" fill="#5b6575" font-size="25">Schedules · IM</text>
+<text x="1186" y="396" fill="#5b6575" font-size="25">Versions · Run traces</text>
+<path d="M 72 488 H 1528" stroke="#d8dde6" stroke-width="2"/>
+<text x="72" y="540" fill="#18212f" font-size="26" font-weight="700">Knowledge stays local.</text>
+<text x="72" y="582" fill="#5b6575" font-size="25">Resource locations are learned on your machine and checked again before reuse.</text>
+</g>
+</svg>
