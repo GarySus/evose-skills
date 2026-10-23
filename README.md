@@ -20,10 +20,10 @@
 npx --yes skills@1.7.4 add GarySus/evose-skills --skill '*' -a codex -g -y --copy
 ```
 
-重新打开编码助手会话，在 ego lite 登录 Evose，即可开始。首次浏览器引导与登录由你完成。
+重新打开智能体会话，在 ego lite 登录 Evose，即可开始。首次浏览器引导与登录由你完成。
 
 <details>
-<summary>交给编码助手安装：复制这句话</summary>
+<summary>交给智能体安装：复制这句话</summary>
 
 > 请根据 https://github.com/GarySus/evose-skills 的 README，在本机安装 Evose Skills；先检查 Node.js、Git 和 ego lite，已有依赖跳过，执行安装命令并验证两个 Skill 可用，首次浏览器引导和 Evose 登录由我完成。
 
@@ -40,7 +40,7 @@ npx --yes skills@1.7.4 add GarySus/evose-skills --skill '*' -a codex -g -y --cop
 
 ## 使用示例
 
-把工作空间或资源链接交给助手，直接说明目标：
+把工作空间或资源链接交给智能体，直接说明目标：
 
 > 使用 evose-platform-manager，打开这个工作空间，看看有哪些 Agent、Workflow 和 Skill，先不修改配置。
 
