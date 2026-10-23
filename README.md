@@ -17,7 +17,7 @@
 准备好 **Node.js ≥22.20、Git 和 [ego lite](https://lite.ego.app/)**，然后在终端执行：
 
 ```bash
-npx --yes skills@1.7.4 add GarySus/evose-skills --skill evose-platform-manager evose-agent-interaction -a codex -g -y --copy
+npx --yes skills@1.7.4 add GarySus/evose-skills --skill '*' -a codex -g -y --copy
 ```
 
 重新打开编码助手会话，在 ego lite 登录 Evose，即可开始。首次浏览器引导与登录由你完成。
